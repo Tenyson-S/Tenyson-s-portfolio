@@ -1,0 +1,174 @@
+/* ==== Color Variables ==== */
+:root {
+  --navy-bg: #0A192F;        /* Deep Navy */
+  --turquoise: #64FFDA;      /* Accent */
+  --gold: #FFD700;           /* Headings */
+  --card-bg: #112240;        /* Slightly lighter navy */
+  --text-light: #F9F9F9;
+}
+
+/* ==== Base Styles ==== */
+body {
+  font-family: 'Titillium Web', sans-serif;
+  line-height: 1.6;
+  background: var(--navy-bg) url('../assets/images/stars-bg.png') no-repeat center center/cover;
+  color: var(--text-light);
+  scroll-behavior: smooth;
+}
+
+/* Force navy background everywhere */
+body,
+html {
+  background-color: var(--navy-bg) !important;
+}
+
+section,
+header,
+footer,
+.container,
+.row {
+  background-color: transparent !important;
+}
+
+/* Override Bootstrap light backgrounds */
+.bg-white,
+.bg-light {
+  background-color: transparent !important;
+}
+/* Navbar */
+.navbar {
+  background-color: var(--navy-bg) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: var(--gold) !important;
+}
+
+.nav-link {
+  color: var(--turquoise) !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--gold) !important;
+}
+
+/* Hero Section */
+header {
+  background: transparent;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+}
+
+header h1 {
+  color: var(--gold);
+  font-weight: 700;
+}
+
+header p {
+  color: var(--text-light);
+}
+
+header .btn-primary {
+  background-color: var(--turquoise);
+  border: none;
+  color: var(--navy-bg);
+}
+
+header .btn-primary:hover {
+  background-color: #4cd1b6;
+}
+
+header .btn-outline-dark {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+header .btn-outline-dark:hover {
+  background-color: var(--gold);
+  color: var(--navy-bg);
+}
+
+/* Cards */
+.card {
+  background-color: var(--card-bg) !important;
+  color: var(--text-light);
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+}
+
+.card .card-title {
+  color: var(--gold);
+}
+
+/* Skills *//* Skill Block Styling */
+.skill-block {
+  background-color: var(--card-bg) !important;
+  border: none;
+  color: var(--text-light);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-block:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.4);
+}
+
+.skill-block .card-title {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.skill-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+
+/* Contact form fields */
+input,
+textarea {
+  background-color: #0d223f !important;
+  color: var(--text-light) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#projects .card-img-top {
+  height: 50vh;             
+  object-fit: cover;         
+  border-radius: 6px;        
+}
+
+/* Footer */
+footer {
+  background-color: transparent;
+  color: var(--text-light);
+  border-top: 1px solid var(--gold);
+}
+
+/* Animations */
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+section.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
