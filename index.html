@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ===== PRIMARY SEO META TAGS ===== -->
+    <title>Hariharan TS — AI/ML Engineer & Software Developer | Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Hariharan TS — final-year CS student specialising in AI/ML, Software Development, and Computer Vision. Explore projects in Deep Learning, LLMs, RAG, and more." />
+    <meta name="keywords"
+        content="Hariharan TS, Tenyson, AI ML Engineer, Software Developer, Machine Learning, Deep Learning, Computer Vision, Python, TensorFlow, OpenCV, FastAPI, LLM, RAG, Portfolio, Madurai" />
+    <meta name="author" content="Hariharan TS" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#7c3aed" />
+    <link rel="canonical" href="https://tenyson-s.github.io/Tenyson-s-portfolio/Personal_Portfolio/" />
+
+    <!-- ===== OPEN GRAPH (Facebook, LinkedIn, WhatsApp) ===== -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:site_name" content="Hariharan TS — Portfolio" />
+    <meta property="og:title" content="Hariharan TS — AI/ML Engineer & Software Developer" />
+    <meta property="og:description"
+        content="Final-year CS student specialising in AI/ML. Building intelligent systems with Python, TensorFlow, LLMs, and more. Check out my projects and get in touch." />
+    <meta property="og:url"
+        content="https://tenyson-s.github.io/Tenyson-s-portfolio/Personal_Portfolio/" />
+    <meta property="og:image" content="assets/images/icons.jpg" />
+    <meta property="og:image:alt" content="Hariharan TS Portfolio" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- ===== TWITTER CARD ===== -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Hariharan TS — AI/ML Engineer & Software Developer" />
+    <meta name="twitter:description"
+        content="Final-year CS student specialising in AI/ML. Building intelligent systems with Python, TensorFlow, LLMs, and more." />
+    <meta name="twitter:image" content="assets/images/icons.jpg" />
+    <meta name="twitter:image:alt" content="Hariharan TS Portfolio" />
+
+    <!-- ===== FAVICON ===== -->
+    <link rel="icon" href="assets/images/icons.jpg" type="image/jpeg" />
+    <link rel="shortcut icon" href="assets/images/icons.jpg" type="image/jpeg" />
+    <link rel="apple-touch-icon" href="assets/images/icons.jpg" />
+
+    <!-- ===== FONTS & STYLES ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- ===== JSON-LD STRUCTURED DATA (Person Schema) ===== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Hariharan TS",
+        "alternateName": "Tenyson",
+        "url": "https://tenyson-s.github.io/Tenyson-s-portfolio/Personal_Portfolio/",
+        "image": "assets/images/icons.jpg",
+        "jobTitle": "AI/ML Engineer & Software Developer",
+        "description": "Final-year Computer Science student specialising in Artificial Intelligence and Machine Learning. Skilled in Python, Java, TensorFlow, OpenCV, LLMs, and RAG systems.",
+        "email": "hari04022005@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Madurai",
+            "addressRegion": "Tamil Nadu",
+            "addressCountry": "IN"
+        },
+        "sameAs": [
+            "https://github.com/Tenyson-S",
+            "https://www.linkedin.com/in/hariharan-ts-8555592a1",
+            "https://leetcode.com/u/RcNeACFObe/"
+        ],
+        "knowsAbout": [
+            "Artificial Intelligence",
+            "Machine Learning",
+            "Deep Learning",
+            "Computer Vision",
+            "Python",
+            "Java",
+            "TensorFlow",
+            "OpenCV",
+            "LLMs",
+            "RAG",
+            "FastAPI",
+            "Software Development"
+        ]
+    }
+    </script>
+</head>
+
+<body>
+
+    <!-- ===== CANVAS BACKGROUND ===== -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>Hariharan<span class="logo-accent">.TS</span><span
+                    class="logo-bracket">/&gt;</span>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#beyond-code" class="nav-link">Beyond Code</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="home">
+        <div class="hero-content reveal">
+            <div class="hero-badge">
+                <span class="status-dot"></span> Available for opportunities
+            </div>
+            <h1 class="hero-title">
+                Hi, I'm <span class="gradient-text">Hariharan TS</span>
+            </h1>
+            <div class="hero-roles">
+                <span class="role-prefix">I'm a </span>
+                <span class="typewriter" id="typewriter"></span>
+                <span class="cursor">|</span>
+            </div>
+            <p class="hero-desc">
+                Final-year CS undergrad specialising in AI & ML. I build intelligent systems, solve real-world problems
+                with code, and believe there are infinite chances as long as I live.
+            </p>
+            <div class="hero-cta">
+                <a href="assets/docs/Resume.pdf" class="btn btn-primary" download="Hariharan_TS_Resume.pdf">
+                    <i class="fa fa-download"></i> Download Resume
+                </a>
+                <a href="#projects" class="btn btn-outline">
+                    <i class="fa fa-code"></i> See Projects
+                </a>
+            </div>
+            <div class="hero-socials">
+                <a href="https://github.com/Tenyson-S" target="_blank" class="social-icon" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/hariharan-ts-8555592a1" target="_blank" class="social-icon"
+                    aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://leetcode.com/u/RcNeACFObe/" target="_blank" class="social-icon" aria-label="LeetCode">
+                    <i class="fas fa-code"></i>
+                </a>
+                <a href="mailto:hari04022005@gmail.com" class="social-icon" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+        <div class="hero-visual reveal">
+            <div class="avatar-ring">
+                <img src="assets/images/avatar.png" alt="Hariharan TS" class="avatar-img" />
+            </div>
+            <div class="floating-card card-1">
+                <i class="fab fa-python"></i>
+                <span>Python</span>
+            </div>
+            <div class="floating-card card-2">
+                <i class="fas fa-brain"></i>
+                <span>AI / ML</span>
+            </div>
+            <div class="floating-card card-3">
+                <i class="fab fa-java"></i>
+                <span>Java</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="section about-section" id="about">
+        <div class="section-header reveal">
+            <p class="section-tag">// get_to_know_me()</p>
+            <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        </div>
+        <div class="about-grid">
+            <div class="about-text reveal">
+                <p class="about-para">
+                    I'm a final-year <strong>Computer Science student</strong> specialising in <strong>Artificial
+                        Intelligence and Machine Learning</strong> at a university in Madurai, Tamil Nadu.
+                    Skilled in Python and Java, I build practical solutions in ML, computer vision, and automation.
+                </p>
+                <p class="about-para">
+                    Beyond code, I express creativity through <strong>artworks</strong> and draw infinite inspiration
+                    from <strong>anime</strong> — keeping a perfect balance between logic and imagination.
+                    Music is my constant companion while I code, debug, and dream.
+                </p>
+                <blockquote class="about-quote">
+                    <i class="fas fa-quote-left"></i>
+                    As long as I live, there are infinite chances.
+                </blockquote>
+                <div class="about-tags">
+                    <span class="tag"><i class="fas fa-map-marker-alt"></i> Madurai, TN</span>
+                    <span class="tag"><i class="fas fa-graduation-cap"></i> CS — AI/ML</span>
+                    <span class="tag"><i class="fas fa-music"></i> Music Lover</span>
+                    <span class="tag"><i class="fas fa-dragon"></i> Anime Fan</span>
+                    <span class="tag"><i class="fas fa-palette"></i> Artist</span>
+                    <span class="tag"><i class="fas fa-robot"></i> AI Enthusiast</span>
+                </div>
+            </div>
+            <div class="about-stats reveal">
+                <div class="stat-card">
+                    <div class="stat-number" data-target="26">0</div>
+                    <div class="stat-label">GitHub Repos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="9">0</div>
+                    <div class="stat-label">Featured Projects</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="5">0</div>
+                    <div class="stat-label">Tech Stacks</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">Chances</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS SECTION ===== -->
+    <section class="section skills-section" id="skills">
+        <div class="section-header reveal">
+            <p class="section-tag">// my_tech_stack()</p>
+            <h2 class="section-title">Skills & <span class="gradient-text">Tools</span></h2>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-category reveal">
+                <h3 class="category-title"><i class="fas fa-terminal"></i> Programming</h3>
+                <div class="skill-items">
+                    <div class="skill-item"><i class="fab fa-python"></i><span>Python</span></div>
+                    <div class="skill-item"><i class="fab fa-java"></i><span>Java</span></div>
+                    <div class="skill-item"><i class="fas fa-code"></i><span>C++</span></div>
+                    <div class="skill-item"><i class="fab fa-dart-lang"></i><span>Dart</span></div>
+                </div>
+            </div>
+            <div class="skill-category reveal">
+                <h3 class="category-title"><i class="fas fa-brain"></i> AI / ML</h3>
+                <div class="skill-items">
+                    <div class="skill-item"><i class="fas fa-project-diagram"></i><span>Machine Learning</span></div>
+                    <div class="skill-item"><i class="fas fa-eye"></i><span>Computer Vision</span></div>
+                    <div class="skill-item"><i class="fas fa-robot"></i><span>Deep Learning</span></div>
+                    <div class="skill-item"><i class="fas fa-comment-dots"></i><span>LLMs / RAG</span></div>
+                    <div class="skill-item"><i class="fas fa-chart-line"></i><span>TensorFlow</span></div>
+                    <div class="skill-item"><i class="fas fa-microscope"></i><span>OpenCV</span></div>
+                </div>
+            </div>
+            <div class="skill-category reveal">
+                <h3 class="category-title"><i class="fas fa-layer-group"></i> Tools & Tech</h3>
+                <div class="skill-items">
+                    <div class="skill-item"><i class="fab fa-github"></i><span>GitHub</span></div>
+                    <div class="skill-item"><i class="fas fa-database"></i><span>SQL</span></div>
+                    <div class="skill-item"><i class="fas fa-server"></i><span>FastAPI</span></div>
+                    <div class="skill-item"><i class="fas fa-fire"></i><span>Firebase</span></div>
+                    <div class="skill-item"><i class="fas fa-leaf"></i><span>MongoDB</span></div>
+                    <div class="skill-item"><i class="fas fa-code-branch"></i><span>VS Code</span></div>
+                </div>
+            </div>
+            <div class="skill-category reveal">
+                <h3 class="category-title"><i class="fas fa-globe"></i> Frontend</h3>
+                <div class="skill-items">
+                    <div class="skill-item"><i class="fab fa-html5"></i><span>HTML5</span></div>
+                    <div class="skill-item"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+                    <div class="skill-item"><i class="fab fa-js"></i><span>JavaScript</span></div>
+                    <div class="skill-item"><i class="fab fa-flutter"></i><span>Flutter</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS SECTION ===== -->
+    <section class="section projects-section" id="projects">
+        <div class="section-header reveal">
+            <p class="section-tag">// my_projects.forEach()</p>
+            <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        </div>
+
+        <div class="project-filters reveal" id="project-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="ai-ml">AI / ML</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="tools">Tools</button>
+            <button class="filter-btn" data-filter="robotics">Robotics</button>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+
+            <!-- AI Finance Management -->
+            <div class="project-card reveal" data-category="ai-ml">
+                <div class="project-card-inner">
+                    <div class="project-top">
+                        <div class="project-icon"><i class="fas fa-wallet"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/Tenyson-S" target="_blank" title="View Code"><i
+                                    class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-badge featured">⭐ Featured</div>
+                    <h3 class="project-title">AI Finance Management</h3>
+                    <p class="project-desc">A production-ready AI-powered personal finance app. Integrates FastAPI
+                        backend with LLM-based financial advice, SMS transaction parsing, OCR extraction, and ML-driven
+                        transaction categorization.</p>
+                    <div class="project-tags">
+                        <span class="ptag">FastAPI</span>
+                        <span class="ptag">Python</span>
+                        <span class="ptag">LLM</span>
+                        <span class="ptag">ML</span>
+                        <span class="ptag">MongoDB</span>
+                        <span class="ptag">Firebase</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Traffic Sign Detection -->
+            <div class="project-card reveal" data-category="ai-ml">
+                <div class="project-card-inner">
+                    <div class="project-top">
+                        <div class="project-icon"><i class="fas fa-traffic-light"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/Tenyson-S/Traffic-Sign-Detection" target="_blank"
+                                title="View Code"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Traffic Sign Detection</h3>
+                    <p class="project-desc">Computer vision system using Deep Learning to detect and classify traffic
+                        signs in real-time for autonomous vehicle applications.</p>
+                    <div class="project-tags">
+                        <span class="ptag">Python</span>
+                        <span class="ptag">Deep Learning</span>
+                        <span class="ptag">OpenCV</span>
+                        <span class="ptag">TensorFlow</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Car Detection AI -->
+            <div class="project-card reveal" data-category="ai-ml">
+                <div class="project-card-inner">
+                    <div class="project-top">
+                        <div class="project-icon"><i class="fas fa-car"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/Tenyson-S/Car-Detection-AI-Deep-Learning-OpenCv" target="_blank"
+                                title="View Code"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Car Detection AI</h3>
+                    <p class="project-desc">Real-time vehicle detection using deep learning and OpenCV. Implements
+                        object detection pipeline for autonomous driving scenarios.</p>
+                    <div class="project-tags">
+                        <span class="ptag">Python</span>
+                        <span class="ptag">OpenCV</span>
+                        <span class="ptag">Deep Learning</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RAG Structure -->
+            <div class="project-card reveal" data-category="ai-ml">
+                <div class="project-card-inner">
+                    <div class="project-top">
+                        <div class="project-icon"><i class="fas fa-brain"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/Tenyson-S/RAG_STRUCTURE" target="_blank" title="View Code"><i
+                                    class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">RAG Structure</h3>
+                    <p class="project-desc">Retrieval-Augmented Generation pipeline implementation. Combines vector
+                        databases with LLMs to create context-aware AI responses.</p>
+                    <div class="project-tags">
+                        <span class="ptag">Python</span>
+                        <span class="ptag">LLM</span>
+                        <span class="ptag">RAG</span>
+                        <span class="ptag">Jupyter</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Face Recognition -->
+            <div class="project-card reveal" data-category="ai-ml">
+                <div class="project-card-inner">
+                    <div class="project-top">
+                        <div class="project-icon"><i class="fas fa-user-circle"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/Tenyson-S/Face-Recognition" target="_blank" title="View Code"><i
+                                    class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Face Recognition</h3>
+                    <p class="project-desc">Computer vision pipeline using OpenCV and ML models (Naive Bayes) for face
+                        detection and recognition. Beginner-friendly ML project.</p>
+                    <div class="project-tags">
+                        <span class="ptag">Python</span>
+                        <span class="ptag">OpenCV</span>
+                        <span class="ptag">Naive Bayes</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Unmanned Water Surface -->
+            <div class="project-card reveal" data-category="robotics">
+                <div class="project-card-inner">
+                    <div class="project-top">
+                        <div class="project-icon"><i class="fas fa-ship"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/Tenyson-S/Debris-Collection" target="_blank"
+                                title="View Code"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Unmanned Water Surface Vehicle</h3>
+                    <p class="project-desc">Autonomous water surface vehicle for debris collection and environmental
+                        monitoring. Built for real-world waterway clean-up operations.</p>
+                    <div class="project-tags">
+                        <span class="ptag">Python</span>
+                        <span class="ptag">Robotics</span>
+                        <span class="ptag">Autonomy</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Itachi Landing Page -->
+            <div class="project-card reveal" data-category="web">
+                <div class="project-card-inner">
+                    <div class="project-top">
+                        <div class="project-icon"><i class="fas fa-eye"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/Tenyson-S/Landing-Page-Itachi-html-css" target="_blank"
+                                title="View Code"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Itachi Tribute Page</h3>
+                    <p class="project-desc">An anime-themed landing page for Itachi Uchiha — a creative front-end
+                        project blending web design with a love for Naruto. ★ 3 stars.</p>
+                    <div class="project-tags">
+                        <span class="ptag">HTML</span>
+                        <span class="ptag">CSS</span>
+                        <span class="ptag">Anime</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Airtel Call Analysis -->
+            <div class="project-card reveal" data-category="ai-ml">
+                <div class="project-card-inner">
+                    <div class="project-top">
+                        <div class="project-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/Tenyson-S/airtel_call_analysis" target="_blank"
+                                title="View Code"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Airtel Call Analysis</h3>
+                    <p class="project-desc">Data analysis and pattern recognition on telecom call data. Extracts
+                        insights and behavioral patterns from large-scale call records.</p>
+                    <div class="project-tags">
+                        <span class="ptag">Python</span>
+                        <span class="ptag">Jupyter</span>
+                        <span class="ptag">Data Analysis</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Line Following Robot -->
+            <div class="project-card reveal" data-category="robotics">
+                <div class="project-card-inner">
+                    <div class="project-top">
+                        <div class="project-icon"><i class="fas fa-robot"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/Tenyson-S/Line-Following-Robot-Arduino-Uno" target="_blank"
+                                title="View Code"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Line Following Robot</h3>
+                    <p class="project-desc">Arduino-based robot capable of autonomously following a designated line path
+                        using IR sensors and embedded control logic.</p>
+                    <div class="project-tags">
+                        <span class="ptag">C++</span>
+                        <span class="ptag">Arduino</span>
+                        <span class="ptag">Embedded</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== LEETCODE SECTION ===== -->
+    <section class="section leet-section" id="leetcode">
+        <div class="section-header reveal">
+            <p class="section-tag">// problem_solving()</p>
+            <h2 class="section-title">LeetCode <span class="gradient-text">Journey</span></h2>
+        </div>
+        <div class="leet-card reveal">
+            <div class="leet-icon"><i class="fas fa-code"></i></div>
+            <div class="leet-info">
+                <h3>Hariharan TS</h3>
+                <p>Sharpening DSA skills daily — arrays, trees, DP, graphs and beyond. Strong in core CS fundamentals.
+                </p>
+                <div class="leet-badges">
+                    <span class="leet-badge green"><i class="fas fa-check-circle"></i> Easy</span>
+                    <span class="leet-badge yellow"><i class="fas fa-bolt"></i> Medium</span>
+                    <span class="leet-badge red"><i class="fas fa-fire"></i> Hard</span>
+                </div>
+            </div>
+            <a href="https://leetcode.com/u/RcNeACFObe/" target="_blank" class="btn btn-leet">
+                <i class="fas fa-external-link-alt"></i> View Profile
+            </a>
+        </div>
+    </section>
+
+    <!-- ===== BEYOND CODE SECTION ===== -->
+    <section class="section beyond-section" id="beyond-code">
+        <div class="section-header reveal">
+            <p class="section-tag">// life_beyond_code()</p>
+            <h2 class="section-title">Beyond <span class="gradient-text">Code</span></h2>
+            <p class="section-sub">Because a developer is more than their IDE</p>
+        </div>
+        <div class="beyond-grid">
+            <div class="beyond-card music-card reveal">
+                <div class="beyond-icon">🎵</div>
+                <h3>Music Vibes</h3>
+                <p>Music is the background process that never terminates. Whether coding a complex model or debugging at
+                    midnight, there's always a playlist running — from lo-fi beats to cinematic OSTs.</p>
+                <div class="beyond-tags">
+                    <span>🎧 Lo-fi</span>
+                    <span>🎼 OST</span>
+                    <span>🎸 Indie</span>
+                </div>
+            </div>
+            <div class="beyond-card anime-card reveal">
+                <div class="beyond-icon">🎌</div>
+                <h3>Anime World</h3>
+                <p>Anime shaped how I think — the willpower in <strong>Naruto</strong>, the freedom of adventure in <strong>One Piece</strong>, the tactical genius of <strong>Attack on Titan</strong>. Every arc teaches something real about life, persistence, and dreaming beyond limits.</p>
+                <div class="beyond-tags">
+                    <span>🍥 Naruto</span>
+                    <span>🏴‍☠️ One Piece</span>
+                    <span>⚔️ AoT</span>
+                </div>
+            </div>
+            <div class="beyond-card art-card reveal">
+                <div class="beyond-icon">🎨</div>
+                <h3>Artworks</h3>
+                <p>Code and art are two sides of the same creativity. I sketch, design, and create visual pieces that
+                    blend imagination with precision — the same skills that make clean, elegant code.</p>
+                <div class="beyond-tags">
+                    <span>✏️ Sketching</span>
+                    <span>🖌️ Design</span>
+                    <span>🌌 Digital Art</span>
+                </div>
+            </div>
+        </div>
+        <div class="beyond-quote reveal">
+            <blockquote>
+                <i class="fas fa-quote-left"></i>
+                Sometimes I wish I was a cloud… just floating along, going wherever the breeze takes me. But when it's
+                time, I know I must think and act.
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="section contact-section" id="contact">
+        <div class="section-header reveal">
+            <p class="section-tag">// send_message()</p>
+            <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+            <p class="section-sub">Have a project, opportunity, or just want to talk tech? Hit me up!</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info reveal">
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div>
+                        <h4>Location</h4>
+                        <p>Madurai, Tamil Nadu, India</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <div>
+                        <h4>Email</h4>
+                        <p><a href="mailto:hari04022005@gmail.com">hari04022005@gmail.com</a></p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fab fa-github"></i></div>
+                    <div>
+                        <h4>GitHub</h4>
+                        <p><a href="https://github.com/Tenyson-S" target="_blank">@Tenyson-S</a></p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+                    <div>
+                        <h4>LinkedIn</h4>
+                        <p><a href="https://www.linkedin.com/in/hariharan-ts-8555592a1" target="_blank">Hariharan TS</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="contact-socials">
+                    <a href="https://github.com/Tenyson-S" target="_blank" class="csocial-btn" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/hariharan-ts-8555592a1" target="_blank" class="csocial-btn"
+                        aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://leetcode.com/u/RcNeACFObe/" target="_blank" class="csocial-btn"
+                        aria-label="LeetCode">
+                        <i class="fas fa-code"></i>
+                        <span>LeetCode</span>
+                    </a>
+                    <a href="mailto:hari04022005@gmail.com" class="csocial-btn" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                        <span>Mail</span>
+                    </a>
+                </div>
+            </div>
+
+            <form class="contact-form reveal" id="contact-form" novalidate>
+                <div class="contact-method-toggle">
+                    <button type="button" class="method-btn active" data-method="email" id="method-email">
+                        <i class="fas fa-envelope"></i> Email
+                    </button>
+                    <button type="button" class="method-btn" data-method="whatsapp" id="method-whatsapp">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </button>
+                </div>
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Sasuke Uchiha" required />
+                    <span class="field-error" id="name-error"></span>
+                </div>
+                <div class="form-group" id="email-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="sasuke@leaf.village" />
+                    <span class="field-error" id="email-error"></span>
+                </div>
+                <div class="form-group" id="phone-group" style="display:none;">
+                    <label for="phone">Your Phone (with country code)</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+91 9876543210" />
+                    <span class="field-error" id="phone-error"></span>
+                </div>
+                <div class="form-group" id="subject-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Collaboration? Project? Just saying hi!" />
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your message here..."
+                        required></textarea>
+                    <span class="field-error" id="message-error"></span>
+                </div>
+                <button type="submit" class="btn btn-primary full-width" id="submit-btn">
+                    <span class="btn-content" id="btn-content">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </span>
+                    <span class="btn-loading" id="btn-loading" style="display:none;">
+                        <span class="spinner"></span> Sending...
+                    </span>
+                </button>
+                <div class="form-status" id="form-status"></div>
+                <p class="form-note"><i class="fas fa-shield-alt"></i> Your message is sent directly & securely — no third-party services.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="logo-bracket">&lt;</span>Hariharan<span class="logo-accent">.TS</span><span
+                    class="logo-bracket">/&gt;</span>
+            </div>
+            <p class="footer-quote">"As long as I live, there are infinite chances."</p>
+            <div class="footer-socials">
+                <a href="https://github.com/Tenyson-S" target="_blank" aria-label="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/hariharan-ts-8555592a1" target="_blank" aria-label="LinkedIn"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a href="https://leetcode.com/u/RcNeACFObe/" target="_blank" aria-label="LeetCode"><i
+                        class="fas fa-code"></i></a>
+                <a href="mailto:hari04022005@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="footer-copy">Hariharan TS. Crafted with <span class="heart">❤</span> + code.</p>
+        </div>
+    </footer>
+
+    <!-- ===== WHATSAPP FLOATING BUTTON ===== -->
+    <a href="https://wa.me/916382939578?text=Hi%20Hariharan!%20I%20found%20your%20portfolio%20and%20would%20like%20to%20connect." 
+       class="whatsapp-float" id="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="wa-tooltip">Chat with me</span>
+    </a>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ===== TOAST CONTAINER ===== -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
