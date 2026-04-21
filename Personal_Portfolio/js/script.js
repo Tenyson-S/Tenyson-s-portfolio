@@ -488,32 +488,6 @@ const Toast = {
     });
 })();
 
-/* ===== DARK / LIGHT THEME TOGGLE ===== */
-(function initThemeToggle() {
-    const toggle = document.getElementById('theme-toggle');
-    const icon = document.getElementById('theme-icon');
-    if (!toggle || !icon) return;
-
-    const saved = localStorage.getItem('portfolio-theme');
-    if (saved === 'light') {
-        document.documentElement.setAttribute('data-theme', 'light');
-        icon.className = 'fas fa-sun';
-    }
-
-    toggle.addEventListener('click', () => {
-        const current = document.documentElement.getAttribute('data-theme');
-        if (current === 'light') {
-            document.documentElement.removeAttribute('data-theme');
-            icon.className = 'fas fa-moon';
-            localStorage.setItem('portfolio-theme', 'dark');
-        } else {
-            document.documentElement.setAttribute('data-theme', 'light');
-            icon.className = 'fas fa-sun';
-            localStorage.setItem('portfolio-theme', 'light');
-        }
-    });
-})();
-
 /* ===== BACK TO TOP ===== */
 (function initBackToTop() {
     const btn = document.getElementById('back-to-top');
