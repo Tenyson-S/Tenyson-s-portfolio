@@ -169,11 +169,9 @@ const Toast = {
     if (!el) return;
     const roles = [
         'AI/ML Engineer',
-        'Software Developer',
-        'AI Enthusiast',
-        'Problem Solver',
-        'Code & Music Lover',
-        'Anime Enthusiast'
+        'Software Engineer',
+        'Systems Thinker',
+        'Creative Problem Solver'
     ];
     let roleIndex = 0, charIndex = 0, deleting = false;
 
