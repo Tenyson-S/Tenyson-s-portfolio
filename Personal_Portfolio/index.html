@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- ===== PRIMARY SEO META TAGS ===== -->
-    <title>Hariharan TS — AI/ML Engineer & Software Developer | Portfolio</title>
+    <title>Hariharan TS ” AI/ML Engineer & Software Developer | Portfolio</title>
     <meta name="description"
-        content="Portfolio of Hariharan TS — recent Computer Science graduate specialising in AI/ML, Software Development, and Computer Vision. Explore projects in Deep Learning, LLMs, RAG, and more." />
+        content="Portfolio of Hariharan TS” recent Computer Science graduate specialising in AI/ML, Software Development, and Computer Vision. Explore projects in Deep Learning, LLMs, RAG, and more." />
     <meta name="keywords"
         content="Hariharan TS, Tenyson, AI ML Engineer, Software Developer, Machine Learning, Deep Learning, Computer Vision, Python, TensorFlow, OpenCV, FastAPI, LLM, RAG, Portfolio, Madurai" />
     <meta name="author" content="Hariharan TS" />
@@ -19,8 +19,8 @@
     <!-- ===== OPEN GRAPH (Facebook, LinkedIn, WhatsApp) ===== -->
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_IN" />
-    <meta property="og:site_name" content="Hariharan TS — Portfolio" />
-    <meta property="og:title" content="Hariharan TS — AI/ML Engineer & Software Developer" />
+    <meta property="og:site_name" content="Hariharan TS” Portfolio" />
+    <meta property="og:title" content="Hariharan TS ” AI/ML Engineer & Software Developer" />
     <meta property="og:description"
         content="Recent Computer Science graduate specialising in AI/ML. Building intelligent systems with Python, TensorFlow, LLMs, and more. Check out my projects and get in touch." />
     <meta property="og:url"
@@ -32,7 +32,7 @@
 
     <!-- ===== TWITTER CARD ===== -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Hariharan TS — AI/ML Engineer & Software Developer" />
+    <meta name="twitter:title" content="Hariharan TS” AI/ML Engineer & Software Developer" />
     <meta name="twitter:description"
         content="Recent Computer Science graduate specialising in AI/ML. Building intelligent systems with Python, TensorFlow, LLMs, and more." />
     <meta name="twitter:image" content="assets/images/icons.jpg" />
@@ -50,7 +50,10 @@
         href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Fira+Code:wght@400;500&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css?v=2" />
+
+    <!-- ===== EMAILJS SDK ===== -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <!-- ===== JSON-LD STRUCTURED DATA (Person Schema) ===== -->
     <script type="application/ld+json">
@@ -95,8 +98,15 @@
 
 <body>
 
-    <!-- ===== CANVAS BACKGROUND ===== -->
-    <canvas id="particle-canvas"></canvas>
+    <!-- ===== CSS BACKGROUND BLOBS ===== -->
+    <div class="bg-blobs" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Legacy canvas kept hidden for JS compatibility -->
+    <canvas id="particle-canvas" style="display:none;"></canvas>
 
     <!-- ===== NAVBAR ===== -->
     <nav class="navbar" id="navbar">
@@ -137,7 +147,7 @@
                 Architecting intelligent solutions at the intersection of AI and scalable system design. I build high-performance pipelines and robust applications, balancing analytical rigor with creative problem-solving.
             </p>
             <div class="hero-cta">
-                <a href="assets/docs/Resume.pdf" class="btn btn-primary" download="Hariharan_TS_Resume.pdf">
+                <a href="assets/Hariharan_Resume_ATS.pdf" class="btn btn-primary" download="Hariharan_Resume_ATS.pdf">
                     <i class="fa fa-download"></i> Download Resume
                 </a>
                 <a href="#projects" class="btn btn-outline">
@@ -161,21 +171,14 @@
             </div>
         </div>
         <div class="hero-visual reveal">
+            <!-- Glow orb behind avatar -->
+            <div class="hero-glow-orb" aria-hidden="true"></div>
+
             <div class="avatar-ring">
-                <img src="assets/images/avatar.png" alt="Hariharan TS" class="avatar-img" />
+                <img src="assets/images/avatar.webp" alt="Hariharan TS" class="avatar-img" />
             </div>
-            <div class="floating-card card-1">
-                <i class="fab fa-python"></i>
-                <span>Python</span>
-            </div>
-            <div class="floating-card card-2">
-                <i class="fas fa-brain"></i>
-                <span>AI / ML</span>
-            </div>
-            <div class="floating-card card-3">
-                <i class="fab fa-java"></i>
-                <span>Java</span>
-            </div>
+
+
         </div>
     </section>
 
@@ -188,14 +191,14 @@
         <div class="about-grid">
             <div class="about-text reveal">
                 <p class="about-para">
-                    I am a Software Engineer and AI Specialist focused on translating complex problems into production-ready architectures. I build robust end-to-end solutions spanning deep learning pipelines, computer vision, and scalable backend infrastructure, always prioritizing performance and real-world impact.
+                    I am a Software Engineer and AI Specialist dedicated to translating complex business problems into scalable, production-ready architectures. I specialize in building robust end-to-end solutions that span deep learning pipelines, computer vision, and high-performance backend infrastructure, with a strong focus on delivering measurable real-world impact.
                 </p>
                 <p class="about-para">
-                    My approach to technology is driven by strong structural design and cohesive world building disciplines I draw from sketching and anime. Whether mapping out data logic or architecting UI, I believe the best systems are engineered with both rigorous analytical precision and an iterative, creative perspective.
+                    My engineering philosophy centers on clean structural design and rigorous analytical precision. Whether I am architecting complex data pipelines or crafting intuitive user interfaces, I believe the best systems are built through continuous iteration, adaptability, and an unwavering commitment to engineering excellence.
                 </p>
                 <div class="about-tags">
                     <span class="tag"><i class="fas fa-map-marker-alt"></i> Madurai, TN</span>
-                    <span class="tag"><i class="fas fa-graduation-cap"></i> CS — AI/ML</span>
+                    <span class="tag"><i class="fas fa-graduation-cap"></i> CS ” AI/ML</span>
                     <span class="tag"><i class="fas fa-laptop-code"></i> Software Engineer</span>
                     <span class="tag"><i class="fas fa-pen-nib"></i> UI/UX Thinking</span>
                     <span class="tag"><i class="fas fa-robot"></i> AI Architect</span>
@@ -215,7 +218,7 @@
                     <div class="stat-label">Tech Stacks</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">∞</div>
+                    <div class="stat-number">&infin;</div>
                     <div class="stat-label">Chances</div>
                 </div>
             </div>
@@ -226,49 +229,87 @@
     <section class="section skills-section" id="skills">
         <div class="section-header reveal">
             <p class="section-tag">// my_tech_stack()</p>
-            <h2 class="section-title">Skills & <span class="gradient-text">Tools</span></h2>
+            <h2 class="section-title">Skills &amp; <span class="gradient-text">Tools</span></h2>
+            <p class="section-sub">The technologies, languages, and platforms I use to create impactful solutions.</p>
         </div>
         <div class="skills-grid">
-            <div class="skill-category reveal">
-                <h3 class="category-title"><i class="fas fa-terminal"></i> Programming</h3>
-                <div class="skill-items">
-                    <div class="skill-item"><i class="fab fa-python"></i><span>Python</span></div>
-                    <div class="skill-item"><i class="fab fa-java"></i><span>Java</span></div>
-                    <div class="skill-item"><i class="fas fa-code"></i><span>C++</span></div>
-                    <div class="skill-item"><i class="fab fa-dart-lang"></i><span>Dart</span></div>
+
+            <!-- Programming Languages -->
+            <article class="skill-category reveal">
+                <div class="category-head">
+                    <div class="category-icon-wrap">
+                        <i class="fas fa-code" aria-hidden="true"></i>
+                    </div>
+                    <div class="category-title-group">
+                        <h3 class="category-title">Programming Languages</h3>
+                        <p class="category-subtitle">Core technical stack</p>
+                    </div>
                 </div>
-            </div>
-            <div class="skill-category reveal">
-                <h3 class="category-title"><i class="fas fa-brain"></i> AI / ML</h3>
-                <div class="skill-items">
-                    <div class="skill-item"><i class="fas fa-project-diagram"></i><span>Machine Learning</span></div>
-                    <div class="skill-item"><i class="fas fa-eye"></i><span>Computer Vision</span></div>
-                    <div class="skill-item"><i class="fas fa-robot"></i><span>Deep Learning</span></div>
-                    <div class="skill-item"><i class="fas fa-comment-dots"></i><span>LLMs / RAG</span></div>
-                    <div class="skill-item"><i class="fas fa-chart-line"></i><span>TensorFlow</span></div>
-                    <div class="skill-item"><i class="fas fa-microscope"></i><span>OpenCV</span></div>
+                <div class="skill-chips">
+                    <span class="skill-chip"><i class="fab fa-python"></i> Python</span>
+                    <span class="skill-chip"><i class="fab fa-java"></i> Java</span>
+                    <span class="skill-chip"><i class="fas fa-code"></i> C++</span>
+                    <span class="skill-chip"><i class="fas fa-database"></i> SQL</span>
                 </div>
-            </div>
-            <div class="skill-category reveal">
-                <h3 class="category-title"><i class="fas fa-layer-group"></i> Tools & Tech</h3>
-                <div class="skill-items">
-                    <div class="skill-item"><i class="fab fa-github"></i><span>GitHub</span></div>
-                    <div class="skill-item"><i class="fas fa-database"></i><span>SQL</span></div>
-                    <div class="skill-item"><i class="fas fa-server"></i><span>FastAPI</span></div>
-                    <div class="skill-item"><i class="fas fa-fire"></i><span>Firebase</span></div>
-                    <div class="skill-item"><i class="fas fa-leaf"></i><span>MongoDB</span></div>
-                    <div class="skill-item"><i class="fas fa-code-branch"></i><span>VS Code</span></div>
+            </article>
+
+            <!-- AI & ML -->
+            <article class="skill-category reveal">
+                <div class="category-head">
+                    <div class="category-icon-wrap ai-icon">
+                        <i class="fas fa-brain" aria-hidden="true"></i>
+                    </div>
+                    <div class="category-title-group">
+                        <h3 class="category-title">AI &amp; ML</h3>
+                        <p class="category-subtitle">Core technical stack</p>
+                    </div>
                 </div>
-            </div>
-            <div class="skill-category reveal">
-                <h3 class="category-title"><i class="fas fa-globe"></i> Frontend</h3>
-                <div class="skill-items">
-                    <div class="skill-item"><i class="fab fa-html5"></i><span>HTML5</span></div>
-                    <div class="skill-item"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
-                    <div class="skill-item"><i class="fab fa-js"></i><span>JavaScript</span></div>
-                    <div class="skill-item"><i class="fab fa-flutter"></i><span>Flutter</span></div>
+                <div class="skill-chips">
+                    <span class="skill-chip"><i class="fas fa-brain"></i> Machine Learning</span>
+                    <span class="skill-chip"><i class="fas fa-eye"></i> Computer Vision</span>
+                    <span class="skill-chip"><i class="fas fa-robot"></i> Deep Learning</span>
+                    <span class="skill-chip"><i class="fas fa-comment-dots"></i> LLMs / RAG</span>
                 </div>
-            </div>
+            </article>
+
+            <!-- Frameworks -->
+            <article class="skill-category reveal">
+                <div class="category-head">
+                    <div class="category-icon-wrap cloud-icon">
+                        <i class="fas fa-layer-group" aria-hidden="true"></i>
+                    </div>
+                    <div class="category-title-group">
+                        <h3 class="category-title">Frameworks</h3>
+                        <p class="category-subtitle">Core technical stack</p>
+                    </div>
+                </div>
+                <div class="skill-chips">
+                    <span class="skill-chip"><i class="fas fa-chart-line"></i> TensorFlow</span>
+                    <span class="skill-chip"><i class="fas fa-microscope"></i> OpenCV</span>
+                    <span class="skill-chip"><i class="fas fa-server"></i> FastAPI</span>
+                    <span class="skill-chip"><i class="fab fa-flutter"></i> Flutter</span>
+                </div>
+            </article>
+
+            <!-- Tools -->
+            <article class="skill-category reveal">
+                <div class="category-head">
+                    <div class="category-icon-wrap tools-icon">
+                        <i class="fas fa-wrench" aria-hidden="true"></i>
+                    </div>
+                    <div class="category-title-group">
+                        <h3 class="category-title">Tools</h3>
+                        <p class="category-subtitle">Core technical stack</p>
+                    </div>
+                </div>
+                <div class="skill-chips">
+                    <span class="skill-chip"><i class="fab fa-github"></i> GitHub</span>
+                    <span class="skill-chip"><i class="fab fa-html5"></i> HTML / CSS / JS</span>
+                    <span class="skill-chip"><i class="fas fa-fire"></i> Firebase</span>
+                    <span class="skill-chip"><i class="fas fa-leaf"></i> MongoDB</span>
+                </div>
+            </article>
+
         </div>
     </section>
 
@@ -279,163 +320,406 @@
             <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
         </div>
 
-        <div class="project-filters reveal" id="project-filters">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="ai-ml">AI / ML</button>
-            <button class="filter-btn" data-filter="web">Web</button>
-            <button class="filter-btn" data-filter="tools">Tools</button>
-            <button class="filter-btn" data-filter="robotics">Robotics</button>
-        </div>
-
         <div class="projects-grid" id="projects-grid">
 
-            <!-- AI Finance Management -->
-            <div class="project-card reveal" data-category="ai-ml">
+            <!-- 01 AI Personal Finance Assistant — MAIN PROJECT -->
+            <article class="project-card reveal project-card-featured project-card-main">
                 <div class="project-card-inner">
-                    <div class="project-top">
-                        <div class="project-icon"><i class="fas fa-wallet"></i></div>
-                        <div class="project-links">
-                            <a href="https://github.com/Tenyson-S" target="_blank" title="View Code"><i class="fab fa-github"></i></a>
+                    <!-- FRONT -->
+                    <div class="project-face project-face-front">
+                        <div class="project-meta-row">
+                            <span class="project-index">01</span>
+                            <span class="project-status project-status-main">&#11088; Main Project</span>
+                        </div>
+                        <h3 class="project-title">AI Personal Finance Assistant</h3>
+                        <p class="project-tagline">AI-powered mobile app delivering personalised financial insights, smart budgeting &amp; expense tracking — Flutter frontend + Python AI/ML backend.</p>
+                        <div class="project-stack" aria-label="Tech stack">
+                            <span>Flutter</span><span>Python</span><span>AI/ML</span><span>FastAPI</span><span>Firebase</span>
                         </div>
                     </div>
-                    <div class="project-badge featured">⭐ Featured</div>
-                    <h3 class="project-title">AI Finance Management</h3>
-                    <p class="project-desc">Full-stack AI personal finance app. Integrates FastAPI backend with NLP and OCR for automated expense categorization and real-time financial insights.</p>
-                    <div class="project-tags">
-                        <span class="ptag">FastAPI</span>
-                        <span class="ptag">Flutter</span>
-                        <span class="ptag">ML/NLP</span>
-                        <span class="ptag">MongoDB</span>
-                        <span class="ptag">Firebase</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- One Piece Encyclopedia -->
-            <div class="project-card reveal" data-category="web">
-                <div class="project-card-inner">
-                    <div class="project-top">
-                        <div class="project-icon"><i class="fas fa-globe"></i></div>
-                        <div class="project-links">
-                            <a href="https://github.com/Tenyson-S" target="_blank" title="View Code"><i class="fab fa-github"></i></a>
+                    <!-- BACK -->
+                    <div class="project-face project-face-back">
+                        <ul class="project-highlights">
+                            <li>Led AI/ML engineering — predictive budgeting models &amp; expense classification pipelines.</li>
+                            <li>Real-time personalised financial recommendations powered by ML inference.</li>
+                            <li>Cross-platform Flutter app with intelligent spend analysis &amp; goal dashboards.</li>
+                        </ul>
+                        <div class="project-actions">
+                            <a href="https://github.com/Tenyson-S/Budget_Tracker" class="project-link" target="_blank" rel="noopener noreferrer">GitHub <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                            <span class="project-link disabled" aria-disabled="true">Demo —</span>
                         </div>
                     </div>
-                    <div class="project-badge featured">⭐ Featured</div>
-                    <h3 class="project-title">Interactive One Piece Web Encyclopedia</h3>
-                    <p class="project-desc">High-performance interactive web platform featuring a custom map-based UI architecture. Engineered with React and complex JSON data modeling for seamless rendering.</p>
-                    <div class="project-tags">
-                        <span class="ptag">React</span>
-                        <span class="ptag">JSON</span>
-                        <span class="ptag">State Mgmt</span>
-                        <span class="ptag">CSS Grid</span>
-                    </div>
                 </div>
-            </div>
+            </article>
 
-            <!-- Traffic Sign Detection -->
-            <div class="project-card reveal" data-category="ai-ml">
+            <!-- 02 One Piece Encyclopedia -->
+            <article class="project-card reveal project-card-featured">
                 <div class="project-card-inner">
-                    <div class="project-top">
-                        <div class="project-icon"><i class="fas fa-traffic-light"></i></div>
-                        <div class="project-links">
-                            <a href="https://github.com/Tenyson-S/Traffic-Sign-Detection" target="_blank" title="View Code"><i class="fab fa-github"></i></a>
+                    <div class="project-face project-face-front">
+                        <div class="project-meta-row">
+                            <span class="project-index">02</span>
+                            <span class="project-status project-status-live"><i class="fas fa-circle"></i> Live</span>
+                        </div>
+                        <h3 class="project-title">One Piece Encyclopedia</h3>
+                        <p class="project-tagline">A comprehensive interactive encyclopedia for the One Piece universe — characters, arcs, devil fruits and more.</p>
+                        <div class="project-stack" aria-label="Tech stack">
+                            <span>React JS</span><span>Tailwind CSS</span><span>JavaScript</span><span>Firebase</span>
                         </div>
                     </div>
-                    <div class="project-badge featured">⭐ Featured</div>
-                    <h3 class="project-title">Traffic Sign Detection</h3>
-                    <p class="project-desc">Real-time computer vision system using deep learning and CNNs to detect and classify traffic signs for autonomous vehicle operations.</p>
-                    <div class="project-tags">
-                        <span class="ptag">Python</span>
-                        <span class="ptag">TensorFlow</span>
-                        <span class="ptag">OpenCV</span>
-                        <span class="ptag">CNN</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Car Detection AI -->
-            <div class="project-card reveal" data-category="ai-ml">
-                <div class="project-card-inner">
-                    <div class="project-top">
-                        <div class="project-icon"><i class="fas fa-car"></i></div>
-                        <div class="project-links">
-                            <a href="https://github.com/Tenyson-S/Car-Detection-AI-Deep-Learning-OpenCv" target="_blank" title="View Code"><i class="fab fa-github"></i></a>
+                    <div class="project-face project-face-back">
+                        <ul class="project-highlights">
+                            <li>Covers characters, devil fruits, story arcs, and lore from the entire series.</li>
+                            <li>Smooth navigation with search and category filtering.</li>
+                            <li>Deployed and live on Firebase Hosting.</li>
+                        </ul>
+                        <div class="project-actions">
+                            <a href="https://one-piece-explorers.web.app" class="project-link" target="_blank" rel="noopener noreferrer">Live Demo <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                            <span class="project-link disabled" aria-disabled="true">GitHub —</span>
                         </div>
                     </div>
-                    <h3 class="project-title">Car Detection AI</h3>
-                    <p class="project-desc">Real-time vehicle detection using deep learning and OpenCV. Implements object detection pipeline for autonomous driving scenarios.</p>
-                    <div class="project-tags">
-                        <span class="ptag">Python</span>
-                        <span class="ptag">OpenCV</span>
-                        <span class="ptag">Deep Learning</span>
-                    </div>
                 </div>
-            </div>
+            </article>
 
-            <!-- Face Recognition -->
-            <div class="project-card reveal" data-category="ai-ml">
+            <!-- 03 Flames -->
+            <article class="project-card reveal project-card-featured">
                 <div class="project-card-inner">
-                    <div class="project-top">
-                        <div class="project-icon"><i class="fas fa-user-circle"></i></div>
-                        <div class="project-links">
-                            <a href="https://github.com/Tenyson-S/Face-Recognition" target="_blank" title="View Code"><i class="fab fa-github"></i></a>
+                    <div class="project-face project-face-front">
+                        <div class="project-meta-row">
+                            <span class="project-index">03</span>
+                            <span class="project-status project-status-live"><i class="fas fa-circle"></i> Live</span>
+                        </div>
+                        <h3 class="project-title">Flames</h3>
+                        <p class="project-tagline">A fun relationship compatibility web app based on the classic FLAMES game — live and interactive.</p>
+                        <div class="project-stack" aria-label="Tech stack">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Firebase</span>
                         </div>
                     </div>
-                    <h3 class="project-title">Face Recognition</h3>
-                    <p class="project-desc">Computer vision pipeline using OpenCV and ML models (Naive Bayes) for face detection and recognition. Beginner-friendly ML project.</p>
-                    <div class="project-tags">
-                        <span class="ptag">Python</span>
-                        <span class="ptag">OpenCV</span>
-                        <span class="ptag">Naive Bayes</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Unmanned Water Surface -->
-            <div class="project-card reveal" data-category="robotics">
-                <div class="project-card-inner">
-                    <div class="project-top">
-                        <div class="project-icon"><i class="fas fa-ship"></i></div>
-                        <div class="project-links">
-                            <a href="https://github.com/Tenyson-S/Debris-Collection" target="_blank" title="View Code"><i class="fab fa-github"></i></a>
+                    <div class="project-face project-face-back">
+                        <ul class="project-highlights">
+                            <li>Implements the FLAMES algorithm to calculate relationship outcomes interactively.</li>
+                            <li>Clean animated UI with smooth result reveal transitions.</li>
+                            <li>Live on Firebase Hosting — shareable and mobile-friendly.</li>
+                        </ul>
+                        <div class="project-actions">
+                            <a href="https://relationship-finder-site.web.app/" class="project-link" target="_blank" rel="noopener noreferrer">Live Demo <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                            <span class="project-link disabled" aria-disabled="true">GitHub —</span>
                         </div>
                     </div>
-                    <h3 class="project-title">Unmanned Water Surface Vehicle</h3>
-                    <p class="project-desc">Autonomous water surface vehicle for debris collection and environmental monitoring. Built for real-world waterway clean-up operations.</p>
-                    <div class="project-tags">
-                        <span class="ptag">Python</span>
-                        <span class="ptag">Robotics</span>
-                        <span class="ptag">Autonomy</span>
+                </div>
+            </article>
+
+            <!-- 04 RAG Structure -->
+            <article class="project-card reveal project-card-featured">
+                <div class="project-card-inner">
+                    <div class="project-face project-face-front">
+                        <div class="project-meta-row">
+                            <span class="project-index">04</span>
+                            <span class="project-status">Completed</span>
+                        </div>
+                        <h3 class="project-title">RAG Structure</h3>
+                        <p class="project-tagline">Notebook walkthrough of retrieval-augmented generation with grounded responses.</p>
+                        <div class="project-stack" aria-label="Tech stack">
+                            <span>Python</span><span>FAISS</span><span>Transformers</span><span>Jupyter</span>
+                        </div>
+                    </div>
+                    <div class="project-face project-face-back">
+                        <ul class="project-highlights">
+                            <li>Covers embedding, indexing, retrieval, and response generation flow.</li>
+                            <li>Demonstrates vector similarity search with a FAISS-style pipeline.</li>
+                            <li>Shows the core building blocks behind practical RAG systems.</li>
+                        </ul>
+                        <div class="project-actions">
+                            <a href="https://github.com/Tenyson-S/RAG_STRUCTURE" class="project-link" target="_blank" rel="noopener noreferrer">GitHub <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                            <span class="project-link disabled" aria-disabled="true">Demo —</span>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </article>
 
+            <!-- 05 Speech To Text -->
+            <article class="project-card reveal project-card-featured">
+                <div class="project-card-inner">
+                    <div class="project-face project-face-front">
+                        <div class="project-meta-row">
+                            <span class="project-index">05</span>
+                            <span class="project-status">Completed</span>
+                        </div>
+                        <h3 class="project-title">Speech To Text</h3>
+                        <p class="project-tagline">Python speech-recognition notebook for converting audio into text.</p>
+                        <div class="project-stack" aria-label="Tech stack">
+                            <span>Python</span><span>SpeechRecognition</span><span>PyAudio</span><span>Jupyter</span>
+                        </div>
+                    </div>
+                    <div class="project-face project-face-back">
+                        <ul class="project-highlights">
+                            <li>Processes <code>.wav</code> audio inputs and produces transcribed output.</li>
+                            <li>Uses speech-recognition tooling with basic failure handling.</li>
+                            <li>Serves as a compact NLP/audio workflow prototype in Jupyter.</li>
+                        </ul>
+                        <div class="project-actions">
+                            <a href="https://github.com/Tenyson-S/Speech_To_Text" class="project-link" target="_blank" rel="noopener noreferrer">GitHub <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                            <span class="project-link disabled" aria-disabled="true">Demo —</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 06 Traffic Sign Detection -->
+            <article class="project-card reveal project-card-featured">
+                <div class="project-card-inner">
+                    <div class="project-face project-face-front">
+                        <div class="project-meta-row">
+                            <span class="project-index">06</span>
+                            <span class="project-status">Completed</span>
+                        </div>
+                        <h3 class="project-title">Traffic Sign Detection</h3>
+                        <p class="project-tagline">CNN-based traffic sign classifier trained on the GTSRB dataset.</p>
+                        <div class="project-stack" aria-label="Tech stack">
+                            <span>Python</span><span>TensorFlow</span><span>Keras</span><span>CNN</span>
+                        </div>
+                    </div>
+                    <div class="project-face project-face-back">
+                        <ul class="project-highlights">
+                            <li>Recognises 43 traffic sign classes for road-safety scenarios.</li>
+                            <li>Includes training and testing scripts with 95%+ test accuracy.</li>
+                            <li>Applies convolutional vision models to assistive driving use cases.</li>
+                        </ul>
+                        <div class="project-actions">
+                            <a href="https://github.com/Tenyson-S/Traffic-Sign-Detection" class="project-link" target="_blank" rel="noopener noreferrer">GitHub <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                            <span class="project-link disabled" aria-disabled="true">Demo —</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 07 Car Detection -->
+            <article class="project-card reveal project-card-featured">
+                <div class="project-card-inner">
+                    <div class="project-face project-face-front">
+                        <div class="project-meta-row">
+                            <span class="project-index">07</span>
+                            <span class="project-status">Completed</span>
+                        </div>
+                        <h3 class="project-title">Car Detection</h3>
+                        <p class="project-tagline">Vehicle detection and counting prototype for roadway video analysis.</p>
+                        <div class="project-stack" aria-label="Tech stack">
+                            <span>Python</span><span>OpenCV</span><span>Video Processing</span><span>Computer Vision</span>
+                        </div>
+                    </div>
+                    <div class="project-face project-face-back">
+                        <ul class="project-highlights">
+                            <li>Detects cars from road footage using OpenCV-based processing.</li>
+                            <li>Uses provided XML data and sample videos for object detection.</li>
+                            <li>Explores practical traffic-scene analysis with computer vision.</li>
+                        </ul>
+                        <div class="project-actions">
+                            <a href="https://github.com/Tenyson-S/Car-Detection-AI-Deep-Learning-OpenCv" class="project-link" target="_blank" rel="noopener noreferrer">GitHub <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                            <span class="project-link disabled" aria-disabled="true">Demo —</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 08 Movie Recommendation System -->
+            <article class="project-card reveal project-card-featured">
+                <div class="project-card-inner">
+                    <div class="project-face project-face-front">
+                        <div class="project-meta-row">
+                            <span class="project-index">08</span>
+                            <span class="project-status">Completed</span>
+                        </div>
+                        <h3 class="project-title">Movie Recommendation System</h3>
+                        <p class="project-tagline">C++ recommender using cosine similarity over a user-movie rating matrix.</p>
+                        <div class="project-stack" aria-label="Tech stack">
+                            <span>C++</span><span>CSV</span><span>Cosine Similarity</span><span>Recommender</span>
+                        </div>
+                    </div>
+                    <div class="project-face project-face-back">
+                        <ul class="project-highlights">
+                            <li>Loads ratings from CSV and predicts unseen movie preferences.</li>
+                            <li>Calculates similarity between users to rank recommendations.</li>
+                            <li>Outputs top suggestions with a simple evaluation workflow.</li>
+                        </ul>
+                        <div class="project-actions">
+                            <a href="https://github.com/Tenyson-S/Movie-Recomendation-System" class="project-link" target="_blank" rel="noopener noreferrer">GitHub <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                            <span class="project-link disabled" aria-disabled="true">Demo —</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 09 Line Following Robot -->
+            <article class="project-card reveal project-card-featured">
+                <div class="project-card-inner">
+                    <div class="project-face project-face-front">
+                        <div class="project-meta-row">
+                            <span class="project-index">09</span>
+                            <span class="project-status">Completed</span>
+                        </div>
+                        <h3 class="project-title">Line Following Robot</h3>
+                        <p class="project-tagline">Arduino-based robot that follows a path using dual IR sensors.</p>
+                        <div class="project-stack" aria-label="Tech stack">
+                            <span>Arduino Uno</span><span>C++</span><span>IR Sensors</span><span>L298N</span>
+                        </div>
+                    </div>
+                    <div class="project-face project-face-back">
+                        <ul class="project-highlights">
+                            <li>Uses IR sensor feedback to steer motors through an L298N driver.</li>
+                            <li>Maps low-level control logic to a simple autonomous robotics task.</li>
+                            <li>Demonstrates hardware-software integration with Arduino Uno.</li>
+                        </ul>
+                        <div class="project-actions">
+                            <a href="https://github.com/Tenyson-S/Line-Following-Robot-Arduino-Uno" class="project-link" target="_blank" rel="noopener noreferrer">GitHub <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                            <span class="project-link disabled" aria-disabled="true">Demo —</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="projects-more reveal">
+            <a href="https://github.com/Tenyson-S" target="_blank" rel="noopener noreferrer">See all repositories <span aria-hidden="true">-&gt;</span></a>
         </div>
     </section>
 
-    <!-- ===== LEETCODE SECTION ===== -->
+    <!-- ===== LEETCODE DASHBOARD SECTION ===== -->
     <section class="section leet-section" id="leetcode">
         <div class="section-header reveal">
             <p class="section-tag">// problem_solving()</p>
-            <h2 class="section-title">LeetCode <span class="gradient-text">Journey</span></h2>
+            <h2 class="section-title">LeetCode <span class="gradient-text">Dashboard</span></h2>
+            <p class="section-sub">Live stats fetched in real-time from LeetCode.</p>
         </div>
-        <div class="leet-card reveal">
-            <div class="leet-icon"><i class="fas fa-code"></i></div>
-            <div class="leet-info">
-                <h3>Hariharan TS</h3>
-                <p>Sharpening DSA skills daily — arrays, trees, DP, graphs and beyond. Strong in core CS fundamentals.
-                </p>
-                <div class="leet-badges">
-                    <span class="leet-badge green"><i class="fas fa-check-circle"></i> Easy</span>
-                    <span class="leet-badge yellow"><i class="fas fa-bolt"></i> Medium</span>
-                    <span class="leet-badge red"><i class="fas fa-fire"></i> Hard</span>
+
+        <div class="leet-dashboard reveal" id="leet-dashboard">
+
+            <!-- Loading skeleton -->
+            <div class="leet-skeleton" id="leet-skeleton">
+                <div class="sk-circle"></div>
+                <div class="sk-bars">
+                    <div class="sk-bar"></div>
+                    <div class="sk-bar"></div>
+                    <div class="sk-bar"></div>
+                    <div class="sk-bar sk-short"></div>
                 </div>
             </div>
-            <a href="https://leetcode.com/u/RcNeACFObe/" target="_blank" class="btn btn-leet">
-                <i class="fas fa-external-link-alt"></i> View Profile
-            </a>
+
+            <!-- Dashboard content (hidden until data loads) -->
+            <div class="leet-content" id="leet-content" style="display:none;">
+
+                <!-- Left: donut ring + solved count -->
+                <div class="leet-donut-wrap">
+                    <svg class="leet-donut" viewBox="0 0 120 120" aria-hidden="true">
+                        <!-- track -->
+                        <circle cx="60" cy="60" r="50" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="10"/>
+                        <!-- hard (red, bottom layer) -->
+                        <circle id="leet-ring-hard" cx="60" cy="60" r="50" fill="none"
+                                stroke="#F87171" stroke-width="10"
+                                stroke-linecap="round" stroke-dasharray="314 314"
+                                stroke-dashoffset="314" transform="rotate(-90 60 60)"/>
+                        <!-- medium (amber) -->
+                        <circle id="leet-ring-medium" cx="60" cy="60" r="50" fill="none"
+                                stroke="#F59E0B" stroke-width="10"
+                                stroke-linecap="round" stroke-dasharray="314 314"
+                                stroke-dashoffset="314" transform="rotate(-90 60 60)"/>
+                        <!-- easy (green, top) -->
+                        <circle id="leet-ring-easy" cx="60" cy="60" r="50" fill="none"
+                                stroke="#10B981" stroke-width="10"
+                                stroke-linecap="round" stroke-dasharray="314 314"
+                                stroke-dashoffset="314" transform="rotate(-90 60 60)"/>
+                    </svg>
+                    <div class="leet-donut-center">
+                        <span class="leet-solved-count" id="leet-total">—</span>
+                        <span class="leet-solved-label">Solved</span>
+                    </div>
+                    <p class="leet-total-label">of <span id="leet-total-questions">—</span> problems</p>
+                </div>
+
+                <!-- Middle: difficulty breakdown -->
+                <div class="leet-breakdown">
+                    <div class="leet-diff-row">
+                        <div class="leet-diff-header">
+                            <span class="leet-diff-dot easy"></span>
+                            <span class="leet-diff-name">Easy</span>
+                            <span class="leet-diff-count" id="leet-easy">—</span>
+                        </div>
+                        <div class="leet-progress-track">
+                            <div class="leet-progress-fill easy" id="leet-bar-easy" style="width:0%"></div>
+                        </div>
+                    </div>
+                    <div class="leet-diff-row">
+                        <div class="leet-diff-header">
+                            <span class="leet-diff-dot medium"></span>
+                            <span class="leet-diff-name">Medium</span>
+                            <span class="leet-diff-count" id="leet-medium">—</span>
+                        </div>
+                        <div class="leet-progress-track">
+                            <div class="leet-progress-fill medium" id="leet-bar-medium" style="width:0%"></div>
+                        </div>
+                    </div>
+                    <div class="leet-diff-row">
+                        <div class="leet-diff-header">
+                            <span class="leet-diff-dot hard"></span>
+                            <span class="leet-diff-name">Hard</span>
+                            <span class="leet-diff-count" id="leet-hard">—</span>
+                        </div>
+                        <div class="leet-progress-track">
+                            <div class="leet-progress-fill hard" id="leet-bar-hard" style="width:0%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: stat cards -->
+                <div class="leet-stats">
+                    <div class="leet-stat-card">
+                        <i class="fas fa-trophy"></i>
+                        <div>
+                            <span class="leet-stat-value" id="leet-rank">—</span>
+                            <span class="leet-stat-label">Global Rank</span>
+                        </div>
+                    </div>
+                    <div class="leet-stat-card">
+                        <i class="fas fa-percent"></i>
+                        <div>
+                            <span class="leet-stat-value" id="leet-rate">—</span>
+                            <span class="leet-stat-label">Acceptance Rate</span>
+                        </div>
+                    </div>
+                    <div class="leet-stat-card">
+                        <i class="fas fa-fire-alt"></i>
+                        <div>
+                            <span class="leet-stat-value" id="leet-streak">—</span>
+                            <span class="leet-stat-label">Current Streak</span>
+                        </div>
+                    </div>
+                    <div class="leet-stat-card">
+                        <i class="fas fa-star"></i>
+                        <div>
+                            <span class="leet-stat-value" id="leet-reputation">—</span>
+                            <span class="leet-stat-label">Reputation</span>
+                        </div>
+                    </div>
+                    <div class="leet-profile-btn-wrap">
+                        <div class="leet-live-indicator">
+                            <span class="leet-live-dot"></span> Live data
+                        </div>
+                        <a href="https://leetcode.com/u/RcNeACFObe/" target="_blank" class="btn btn-leet" id="leet-profile-btn">
+                            <i class="fas fa-external-link-alt"></i> View Profile
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Error state -->
+            <div class="leet-error" id="leet-error" style="display:none;">
+                <i class="fas fa-wifi"></i>
+                <p>Couldn't fetch live data. <a href="https://leetcode.com/u/RcNeACFObe/" target="_blank">View profile directly →</a></p>
+            </div>
+
         </div>
     </section>
+
 
     <!-- ===== BEYOND CODE SECTION ===== -->
     <section class="section beyond-section" id="beyond-code">
@@ -444,6 +728,7 @@
             <h2 class="section-title">Beyond <span class="gradient-text">Code</span></h2>
             <p class="section-sub">Interests that shape my perspective and approach to problem-solving.</p>
         </div>
+        
         <div class="beyond-grid">
             <div class="beyond-card music-card reveal">
                 <div class="beyond-icon"><i class="fas fa-headphones-alt"></i></div>
@@ -456,7 +741,7 @@
                 </div>
             </div>
             <div class="beyond-card anime-card reveal">
-                <div class="beyond-icon"><i class="fas fa-film"></i></div>
+                <div class="beyond-icon"><img src="assets/images/uchiha_logo.webp" alt="Uchiha Logo" class="beyond-img-icon"></div>
                 <h3>Anime</h3>
                 <p>I find value in the intricate world-building and narrative depth of anime. It reinforces an appreciation for cohesive storytelling, reminding me that well-designed systems require intent, structure, and a clear overarching vision.</p>
                 <div class="beyond-tags">
@@ -479,23 +764,12 @@
         <div class="beyond-quotes reveal">
             <div class="quote-container">
                 <blockquote>
-                    <i class="fas fa-quote-left"></i>
-                    "Sometimes I wish I was a cloud… just floating along, going wherever the breeze takes me. But when it's time, I know I must think and act."
-                    <cite>— Shikamaru Nara</cite>
+                    <!-- <i class="fas fa-quote-left"></i> -->
+                    "Sometimes I wish I was a cloud¦ just floating along, going wherever the breeze takes me. But when it's time, I know I must think and act."
+                    <!-- <i class="fas fa-quote-right"></i> -->
+                    <cite>” Shikamaru Nara</cite>
+                    
                 </blockquote>
-                <div class="quote-insight">
-                    <strong>Engineering Insight:</strong> Embracing periods of divergent thinking allows innovative solutions to surface naturally. But when shipping production code, it demands entering a state of rigorous focus, execution, and decisive action.
-                </div>
-            </div>
-            <div class="quote-container">
-                <blockquote>
-                    <i class="fas fa-quote-left"></i>
-                    "You need to accept the fact that you're not the best and have all the will to strive to be better than anyone you face."
-                    <cite>— Roronoa Zoro</cite>
-                </blockquote>
-                <div class="quote-insight">
-                    <strong>Engineering Insight:</strong> Technology evolves relentlessly. The strongest engineers operate with extreme humility, rapid adaptability, and continuous iteration, tackling unfamiliar domains with a relentless drive to master them.
-                </div>
             </div>
         </div>
     </section>
@@ -605,7 +879,7 @@
                     </span>
                 </button>
                 <div class="form-status" id="form-status"></div>
-                <p class="form-note"><i class="fas fa-shield-alt"></i> Your message is sent directly & securely — no third-party services.</p>
+                <p class="form-note"><i class="fas fa-shield-alt"></i> Powered by EmailJS ” you&rsquo;ll receive a confirmation email on send.</p>
             </form>
         </div>
     </section>
@@ -627,7 +901,7 @@
                         class="fas fa-code"></i></a>
                 <a href="mailto:hari04022005@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
-            <p class="footer-copy">Hariharan TS. Crafted with <span class="heart">❤</span> + code.</p>
+            <p class="footer-copy">Hariharan TS. Crafted with <span class="heart">💙</span> + code.</p>
         </div>
     </footer>
 
@@ -647,6 +921,147 @@
     <div class="toast-container" id="toast-container"></div>
 
     <script src="js/script.js"></script>
+
+    <!-- LeetCode real-time dashboard -->
+    <script>
+    (function () {
+        const USERNAME = 'RcNeACFObe';
+        const CIRCUMFERENCE = 2 * Math.PI * 50; // r=50 → ≈314.16
+
+        function setRing(id, pct, total, offset) {
+            const el = document.getElementById(id);
+            if (!el) return;
+            const arcLen = CIRCUMFERENCE * pct;
+            el.style.strokeDasharray  = `${arcLen} ${CIRCUMFERENCE}`;
+            el.style.strokeDashoffset = `-${offset}`;
+        }
+
+        function animateNumber(el, target) {
+            if (!el) return;
+            const start = Date.now(), dur = 1000, from = 0;
+            function step() {
+                const p = Math.min((Date.now() - start) / dur, 1);
+                el.textContent = Math.round(from + (target - from) * p);
+                if (p < 1) requestAnimationFrame(step);
+            }
+            requestAnimationFrame(step);
+        }
+
+        async function fetchStats() {
+            const url = `https://alfa-leetcode-api.onrender.com/${USERNAME}/solved`;
+            const url2 = `https://alfa-leetcode-api.onrender.com/userProfile/${USERNAME}`;
+
+            try {
+                const [solvedRes, profileRes] = await Promise.all([
+                    fetch(url,  { signal: AbortSignal.timeout(8000) }),
+                    fetch(url2, { signal: AbortSignal.timeout(8000) })
+                ]);
+
+                if (!solvedRes.ok || !profileRes.ok) throw new Error('API error');
+
+                const solved  = await solvedRes.json();
+                const profile = await profileRes.json();
+
+                // --- counts ---
+                const easy   = solved.easySolved   ?? 0;
+                const medium = solved.mediumSolved  ?? 0;
+                const hard   = solved.hardSolved    ?? 0;
+                const total  = solved.solvedProblem ?? (easy + medium + hard);
+
+                const easyTotal   = solved.totalEasy   ?? 880;
+                const mediumTotal = solved.totalMedium ?? 1846;
+                const hardTotal   = solved.totalHard   ?? 812;
+                const grandTotal  = easyTotal + mediumTotal + hardTotal;
+
+                // --- profile fields ---
+                const rank       = profile.ranking    ?? '—';
+                const reputation = profile.reputation ?? '—';
+
+                // Acceptance rate: from submitStats.acSubmissionNum array
+                // index 0 = All, index 1 = Easy, index 2 = Medium, index 3 = Hard
+                let rate = '—';
+                try {
+                    const acAll    = profile.submitStats?.acSubmissionNum?.[0]?.submissions ?? 0;
+                    const totalAll = profile.submitStats?.totalSubmissionNum?.[0]?.submissions ?? 0;
+                    if (totalAll > 0) rate = ((acAll / totalAll) * 100).toFixed(1) + '%';
+                } catch (_) {}
+
+                // Fill DOM
+                document.getElementById('leet-total').textContent           = total;
+                document.getElementById('leet-total-questions').textContent = grandTotal.toLocaleString();
+                document.getElementById('leet-easy').textContent   = `${easy} / ${easyTotal}`;
+                document.getElementById('leet-medium').textContent = `${medium} / ${mediumTotal}`;
+                document.getElementById('leet-hard').textContent   = `${hard} / ${hardTotal}`;
+                document.getElementById('leet-rank').textContent       = typeof rank === 'number' ? rank.toLocaleString() : rank;
+                document.getElementById('leet-rate').textContent       = rate;
+                document.getElementById('leet-streak').textContent     = '—';
+                document.getElementById('leet-reputation').textContent = reputation;
+
+                // Progress bars (% of total each category)
+                const totalPct = grandTotal > 0 ? total / grandTotal : 0;
+                setTimeout(() => {
+                    document.getElementById('leet-bar-easy').style.width   = `${(easy / easyTotal) * 100}%`;
+                    document.getElementById('leet-bar-medium').style.width = `${(medium / mediumTotal) * 100}%`;
+                    document.getElementById('leet-bar-hard').style.width   = `${(hard / hardTotal) * 100}%`;
+                }, 100);
+
+                // SVG donut — stack arcs
+                const easyArc   = CIRCUMFERENCE * (easy   / grandTotal);
+                const mediumArc = CIRCUMFERENCE * (medium / grandTotal);
+                const hardArc   = CIRCUMFERENCE * (hard   / grandTotal);
+
+                setTimeout(() => {
+                    const easyEl   = document.getElementById('leet-ring-easy');
+                    const medEl    = document.getElementById('leet-ring-medium');
+                    const hardEl   = document.getElementById('leet-ring-hard');
+
+                    // Each arc starts where the previous ended
+                    const hardOffset   = 0;
+                    const medOffset    = hardArc;
+                    const easyOffset   = hardArc + mediumArc;
+
+                    [easyEl, medEl, hardEl].forEach(el => {
+                        el.style.transition = 'stroke-dasharray 1.2s cubic-bezier(0.4,0,0.2,1), stroke-dashoffset 1.2s cubic-bezier(0.4,0,0.2,1)';
+                    });
+
+                    hardEl.style.strokeDasharray  = `${hardArc} ${CIRCUMFERENCE}`;
+                    hardEl.style.strokeDashoffset = `${-hardOffset}`;
+
+                    medEl.style.strokeDasharray  = `${mediumArc} ${CIRCUMFERENCE}`;
+                    medEl.style.strokeDashoffset = `${-medOffset}`;
+
+                    easyEl.style.strokeDasharray  = `${easyArc} ${CIRCUMFERENCE}`;
+                    easyEl.style.strokeDashoffset = `${-easyOffset}`;
+                }, 120);
+
+                // Show content
+                document.getElementById('leet-skeleton').style.display = 'none';
+                document.getElementById('leet-content').style.display  = 'grid';
+
+            } catch (err) {
+                console.warn('LeetCode API failed:', err);
+                document.getElementById('leet-skeleton').style.display = 'none';
+                document.getElementById('leet-error').style.display    = 'flex';
+            }
+        }
+
+        // Trigger fetch when section scrolls into view
+        const target = document.getElementById('leet-dashboard');
+        if (target && 'IntersectionObserver' in window) {
+            const obs = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting) {
+                    fetchStats();
+                    obs.disconnect();
+                }
+            }, { threshold: 0.15 });
+            obs.observe(target);
+        } else {
+            fetchStats();
+        }
+    })();
+    </script>
 </body>
 
 </html>
+
+

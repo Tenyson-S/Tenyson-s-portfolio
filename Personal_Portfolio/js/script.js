@@ -6,10 +6,12 @@
    ============================================================ */
 
 /* ===== CONFIGURATION ===== */
+const PREFERS_REDUCED_MOTION = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const IS_MOBILE_OR_TABLET = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || window.innerWidth < 992;
 const CONFIG = {
     whatsappNumber: '916382939578',
     apiEndpoint: '/api/contact',
-    particleCount: 60,
+    particleCount: 24,
     mouseRadius: 150,
 };
 
@@ -59,11 +61,14 @@ const Toast = {
 (function initParticles() {
     const canvas = document.getElementById('particle-canvas');
     if (!canvas) return;
-    const ctx = canvas.getContext('2d');
+
+    canvas.style.display = 'none';
+    return;
     const chars = ['{ }', '</>', '{}', ';', '01', '( )', '=>', '&&', '||', '++', '/*', '*/'];
     let particles = [];
     let mouse = { x: -1000, y: -1000 };
     let blobX, blobY;
+    const useMouseRepulsion = window.innerWidth >= 1400 && !PREFERS_REDUCED_MOTION;
 
     function resize() {
         canvas.width = window.innerWidth;
@@ -106,7 +111,7 @@ const Toast = {
             const dx = mouse.x - this.x;
             const dy = mouse.y - this.y;
             const dist = Math.sqrt(dx * dx + dy * dy);
-            if (dist < CONFIG.mouseRadius) {
+            if (useMouseRepulsion && dist < CONFIG.mouseRadius) {
                 const force = (CONFIG.mouseRadius - dist) / CONFIG.mouseRadius;
                 this.x -= dx * force * 0.015;
                 this.y -= dy * force * 0.015;
@@ -138,7 +143,7 @@ const Toast = {
         }
 
         /* Primary blob — purple glow following cursor */
-        const g1 = ctx.createRadialGradient(blobX, blobY, 0, blobX, blobY, 300);
+        const g1 = ctx.createRadialGradient(blobX, blobY, 0, blobX, blobY, 250);
         g1.addColorStop(0, 'rgba(124, 58, 237, 0.07)');
         g1.addColorStop(1, 'rgba(124, 58, 237, 0)');
         ctx.fillStyle = g1;
@@ -147,7 +152,7 @@ const Toast = {
         /* Secondary blob — cyan glow mirrored */
         const mirrorX = canvas.width - blobX * 0.5;
         const mirrorY = canvas.height - blobY * 0.5;
-        const g2 = ctx.createRadialGradient(mirrorX, mirrorY, 0, mirrorX, mirrorY, 250);
+        const g2 = ctx.createRadialGradient(mirrorX, mirrorY, 0, mirrorX, mirrorY, 220);
         g2.addColorStop(0, 'rgba(6, 182, 212, 0.05)');
         g2.addColorStop(1, 'rgba(6, 182, 212, 0)');
         ctx.fillStyle = g2;
@@ -276,37 +281,93 @@ const Toast = {
     counters.forEach(c => observer.observe(c));
 })();
 
-/* ===== PROJECT FILTERS ===== */
-(function initFilters() {
-    const btns = document.querySelectorAll('.filter-btn');
-    const cards = document.querySelectorAll('.project-card');
+/* ===== SECTION ANIMATIONS ===== */
+(function initSectionAnimations() {
+    const skillBars = document.querySelectorAll('.skill-bar-fill');
+    const projectCards = document.querySelectorAll('.project-card');
 
-    btns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            btns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-
-            const filter = btn.dataset.filter;
-            cards.forEach(card => {
-                const match = filter === 'all' || card.dataset.category === filter;
-                if (match) {
-                    card.classList.remove('hidden');
-                    card.classList.remove('reveal');
-                    void card.offsetWidth; // reflow
-                    card.classList.add('reveal');
-                    setTimeout(() => card.classList.add('visible'), 50);
-                } else {
-                    card.classList.add('hidden');
-                }
-            });
+    const skillObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            const fill = entry.target;
+            fill.style.width = fill.dataset.width || '0%';
+            skillObserver.unobserve(fill);
         });
+    }, { threshold: 0.35 });
+
+    skillBars.forEach(fill => {
+        fill.style.width = '0%';
+        skillObserver.observe(fill);
     });
+
+    const projectObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            const card = entry.target;
+            const delay = Array.from(projectCards).indexOf(card) * 100;
+            setTimeout(() => card.classList.add('project-visible'), delay);
+            projectObserver.unobserve(card);
+        });
+    }, { threshold: 0.2, rootMargin: '0px 0px -40px 0px' });
+
+    projectCards.forEach(card => projectObserver.observe(card));
 })();
+
+/* ===== EMAILJS CONFIGURATION ===== */
+/*
+ * HOW TO SET UP (takes ~5 minutes, free):
+ *
+ * 1. Go to https://www.emailjs.com → Sign up (free: 200 emails/month)
+ * 2. Add a Service: Dashboard → Email Services → Add Service → Gmail
+ *    • Connect your Gmail → copy the SERVICE_ID below
+ *
+ * 3. Create Template 1 — "contact_notification" (message TO you):
+ *    Subject : New message from {{from_name}} via Portfolio
+ *    Body    :
+ *      Name   : {{from_name}}
+ *      Email  : {{from_email}}
+ *      Subject: {{subject}}
+ *      Message: {{message}}
+ *    → Copy the Template ID → paste as TEMPLATE_NOTIFICATION below
+ *
+ * 4. Create Template 2 — "contact_autoreply" (auto-reply TO sender):
+ *    To Email: {{reply_to}}
+ *    Subject : Got your message, {{from_name}}!
+ *    Body    :
+ *      Hi {{from_name}},
+ *
+ *      Thank you for reaching out! Your message has been received.
+ *      I'll review it and get back to you within 24 hours.
+ *
+ *      Here's what you sent:
+ *      ———————————————
+ *      {{message}}
+ *      ———————————————
+ *
+ *      Talk soon,
+ *      Hariharan T S
+ *      AI/ML Engineer & Software Developer
+ *      hari04022005@gmail.com
+ *    → Copy the Template ID → paste as TEMPLATE_AUTOREPLY below
+ *
+ * 5. Dashboard → Account → Public Key → paste as PUBLIC_KEY below
+ */
+const EMAILJS_CONFIG = {
+    PUBLIC_KEY:            '9J7lth3GpRAkt9tQ1',        // ← paste here
+    SERVICE_ID:            'service_9zw3f9o',         // ← paste here
+    TEMPLATE_NOTIFICATION: 'template_qaayz3o', // ← paste here
+    TEMPLATE_AUTOREPLY:    'template_spx35ym',    // ← paste here
+};
 
 /* ===== SMART CONTACT FORM ===== */
 (function initContactForm() {
     const form = document.getElementById('contact-form');
     if (!form) return;
+
+    /* Initialise EmailJS with public key */
+    if (window.emailjs) {
+        emailjs.init({ publicKey: EMAILJS_CONFIG.PUBLIC_KEY });
+    }
 
     let contactMethod = 'email'; // 'email' or 'whatsapp'
 
@@ -419,72 +480,84 @@ const Toast = {
         return valid;
     }
 
-    /* Form submit */
+    /* ── Form submit ── */
     form.addEventListener('submit', async function (e) {
         e.preventDefault();
         if (!validate()) return;
 
         setLoading(true);
 
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const phone = document.getElementById('phone').value.trim();
-        const subject = document.getElementById('subject').value.trim();
+        const name    = document.getElementById('name').value.trim();
+        const email   = document.getElementById('email').value.trim();
+        const phone   = document.getElementById('phone').value.trim();
+        const subject = document.getElementById('subject').value.trim() || 'No subject';
         const message = document.getElementById('message').value.trim();
 
-        /* WhatsApp mode: open WhatsApp + send anonymous email */
+        /* ── WhatsApp mode ── */
         if (contactMethod === 'whatsapp') {
             const waText = encodeURIComponent(
                 `Hi Hariharan! I'm ${name}.\n\n${message}\n\n— Sent via your portfolio`
             );
-            const cleanPhone = phone.replace(/[\s\-()]/g, '').replace(/^\+/, '');
-            const waURL = `https://wa.me/${CONFIG.whatsappNumber}?text=${waText}`;
-            window.open(waURL, '_blank');
-
-            /* Also send email notification in background */
-            try {
-                await fetch(CONFIG.apiEndpoint, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ name, phone: cleanPhone, message }),
-                });
-            } catch (_) {
-                /* Silent — WhatsApp is the primary channel */
-            }
-
+            window.open(`https://wa.me/${CONFIG.whatsappNumber}?text=${waText}`, '_blank');
             setLoading(false);
-            showStatus('WhatsApp opened! A copy was also sent via email.', 'success');
-            Toast.show('WhatsApp chat opened successfully!', 'success');
+            showStatus('WhatsApp opened!', 'success');
+            Toast.show('WhatsApp chat opened!', 'success');
             form.reset();
             return;
         }
 
-        /* Email mode: send via backend API */
+        /* ── Email mode via EmailJS ── */
+        if (!window.emailjs) {
+            showStatus('Email service unavailable. Please email directly: hari04022005@gmail.com', 'error');
+            setLoading(false);
+            return;
+        }
+
+        /* Shared template variables — must match EmailJS template placeholders exactly */
+        const templateParams = {
+            from_name:  name,
+            user_email: email,
+            reply_to:   email,   // used as "To Email" in the auto-reply template
+            title:      subject,
+            message:    message,
+        };
+
         try {
-            const res = await fetch(CONFIG.apiEndpoint, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ name, email, subject, message }),
-            });
+            /* 1️⃣  Send notification to Hariharan */
+            await emailjs.send(
+                EMAILJS_CONFIG.SERVICE_ID,
+                EMAILJS_CONFIG.TEMPLATE_NOTIFICATION,
+                templateParams
+            );
 
-            const data = await res.json();
+            /* 2️⃣  Send auto-reply to the sender */
+            await emailjs.send(
+                EMAILJS_CONFIG.SERVICE_ID,
+                EMAILJS_CONFIG.TEMPLATE_AUTOREPLY,
+                templateParams
+            );
 
-            if (res.ok && data.success) {
-                showStatus('Message sent successfully! I\'ll get back to you soon.', 'success');
-                Toast.show('Message delivered! ✉️', 'success');
-                form.reset();
-            } else {
-                showStatus(data.message || 'Something went wrong. Please try again.', 'error');
-                Toast.show(data.message || 'Failed to send message.', 'error');
-            }
+            showStatus(
+                'Message sent! Check your inbox — a confirmation has been sent to you. I\'ll reply within 24 hours.',
+                'success'
+            );
+            Toast.show('Message delivered + confirmation sent to your email!', 'success');
+            form.reset();
+
         } catch (err) {
-            showStatus('Network error. Please check your connection and try again.', 'error');
-            Toast.show('Network error — please try again.', 'error');
+            console.error('EmailJS error:', err);
+            showStatus(
+                'Something went wrong. Please email me directly at hari04022005@gmail.com',
+                'error'
+            );
+            Toast.show('Send failed — please email directly.', 'error');
         } finally {
             setLoading(false);
         }
     });
 })();
+
+
 
 /* ===== BACK TO TOP ===== */
 (function initBackToTop() {
@@ -508,3 +581,33 @@ window.addEventListener('load', () => {
 
     Toast.init();
 });
+
+
+/* ===== MOBILE: Tap to reveal project details ===== */
+(function initProjectTapReveal() {
+    const cards = document.querySelectorAll('.project-card');
+    if (!cards || !cards.length) return;
+
+    function onCardClick(e) {
+        // don't toggle when clicking links or buttons inside the card
+        const tag = e.target.tagName.toLowerCase();
+        if (tag === 'a' || tag === 'button' || e.target.closest('a') || e.target.closest('button')) return;
+
+        if (window.innerWidth <= 768) {
+            this.classList.toggle('expanded');
+            // scroll the card into view when expanding for better UX
+            if (this.classList.contains('expanded')) this.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+
+    cards.forEach(card => {
+        card.addEventListener('click', onCardClick);
+    });
+
+    // Remove expanded states when resizing to desktop to avoid stale states
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            cards.forEach(c => c.classList.remove('expanded'));
+        }
+    });
+})();
