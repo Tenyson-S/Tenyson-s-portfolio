@@ -95,6 +95,8 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 body {
@@ -103,6 +105,7 @@ body {
     font-family: var(--font-body);
     line-height: 1.7;
     overflow-x: hidden;
+    width: 100%;
     cursor: default;
 }
 
@@ -559,6 +562,7 @@ ul {
     font-size: 1rem;
     margin-bottom: 16px;
     line-height: 1.85;
+    text-align: justify;
 }
 
 .about-quote {
@@ -1931,6 +1935,10 @@ ul {
 
     .hero-desc {
         max-width: 100%;
+    }
+
+    .hero-cta, .hero-socials {
+        justify-content: center;
     }
 
     .about-grid {
