@@ -147,9 +147,9 @@
                 Architecting intelligent solutions at the intersection of AI and scalable system design. I build high-performance pipelines and robust applications, balancing analytical rigor with creative problem-solving.
             </p>
             <div class="hero-cta">
-                <a href="javascript:void(0)" class="btn btn-primary" onclick="document.getElementById('hire-modal').classList.add('active')">
+                <button type="button" class="btn btn-primary" id="hire-me-trigger" onclick="handleHireMe()">
                     <i class="fa fa-briefcase"></i> Hire Me
-                </a>
+                </button>
                 <a href="#projects" class="btn btn-outline">
                     <i class="fa fa-code"></i> See Projects
                 </a>
@@ -1093,16 +1093,9 @@
     <div id="hire-modal" class="modal-overlay">
         <div class="modal-content">
             <button class="modal-close" onclick="document.getElementById('hire-modal').classList.remove('active')">&times;</button>
-            <h3 class="modal-title">Select Role</h3>
-            <p class="modal-desc">Download the resume tailored for the specific role.</p>
-            <div class="role-list">
-                <a href="assets/docs/Hariharan_TS_AI_Engineer_Resume.docx" class="role-btn" download>AI Engineer  </a>
-                <a href="assets/docs/Hariharan_TS_AI_FullStack_Engineer_Resume.docx" class="role-btn" download>AI Full stack Engineer </a>
-                <a href="assets/docs/Hariharan_TS_FullStack_Developer_Resume.docx" class="role-btn" download>Full Stack Developer </a>
-                <a href="assets/docs/Hariharan_TS_Python_FullStack_Resume.docx" class="role-btn" download>Python Developer </a>
-                <a href="assets/docs/Hariharan_TS_Python_Backend_Resume.docx" class="role-btn" download>Python Backend Developer </a>
-                <a href="assets/docs/General_Resume.docx" class="role-btn" download>General Resume </a>
-            </div>
+            <h3 class="modal-title">Hire Me</h3>
+            <p class="modal-desc">Your request will be sent to me and my resume will start downloading immediately.</p>
+            <button type="button" class="role-btn" id="hire-modal-btn" onclick="handleHireMeDownload()">Download Resume</button>
         </div>
     </div>
 </body>

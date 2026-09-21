@@ -359,6 +359,53 @@ const EMAILJS_CONFIG = {
     TEMPLATE_AUTOREPLY:    'template_spx35ym',    // ← paste here
 };
 
+/* ===== HIRE ME FLOW ===== */
+window.handleHireMe = function handleHireMe() {
+    const modal = document.getElementById('hire-modal');
+    if (typeof Toast !== 'undefined' && Toast.show) {
+        Toast.show('Preparing your email and resume download...', 'info', 2200);
+    }
+    if (modal) modal.classList.add('active');
+};
+
+window.handleHireMeDownload = function handleHireMeDownload() {
+    const modal = document.getElementById('hire-modal');
+    const resumePath = 'assets/docs/My_Resume.pdf';
+    const emailAddress = 'hari04022005@gmail.com';
+    const subject = encodeURIComponent('Hiring Inquiry - Resume Request');
+    const body = encodeURIComponent(
+        'Hello Hariharan,\n\nI would like to discuss a hiring opportunity with you.\nPlease review my inquiry and let me know if we can connect.\n\nThank you.\n'
+    );
+
+    window.location.href = `mailto:${emailAddress}?subject=${subject}&body=${body}`;
+
+    setTimeout(() => {
+        const iframe = document.createElement('iframe');
+        iframe.src = resumePath;
+        iframe.style.display = 'none';
+        document.body.appendChild(iframe);
+        setTimeout(() => iframe.remove(), 1500);
+    }, 250);
+
+    if (modal) modal.classList.remove('active');
+    if (typeof Toast !== 'undefined' && Toast.show) {
+        Toast.show('Email drafted and resume download started.', 'success');
+    }
+};
+
+(function initHireMeFlow() {
+    const trigger = document.getElementById('hire-me-trigger');
+    const modalButton = document.getElementById('hire-modal-btn');
+
+    if (trigger) {
+        trigger.addEventListener('click', window.handleHireMe);
+    }
+
+    if (modalButton) {
+        modalButton.addEventListener('click', window.handleHireMeDownload);
+    }
+})();
+
 /* ===== SMART CONTACT FORM ===== */
 (function initContactForm() {
     const form = document.getElementById('contact-form');
