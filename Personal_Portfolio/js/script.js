@@ -371,21 +371,20 @@ window.handleHireMe = function handleHireMe() {
 window.handleHireMeDownload = function handleHireMeDownload() {
     const modal = document.getElementById('hire-modal');
     const resumePath = 'assets/docs/My_Resume.pdf';
+    const resumeLink = document.createElement('a');
     const emailAddress = 'hari04022005@gmail.com';
     const subject = encodeURIComponent('Hiring Inquiry - Resume Request');
     const body = encodeURIComponent(
         'Hello Hariharan,\n\nI would like to discuss a hiring opportunity with you.\nPlease review my inquiry and let me know if we can connect.\n\nThank you.\n'
     );
 
-    window.location.href = `mailto:${emailAddress}?subject=${subject}&body=${body}`;
+    resumeLink.href = resumePath;
+    resumeLink.download = 'Hariharan_TS_Resume.pdf';
+    document.body.appendChild(resumeLink);
+    resumeLink.click();
+    resumeLink.remove();
 
-    setTimeout(() => {
-        const iframe = document.createElement('iframe');
-        iframe.src = resumePath;
-        iframe.style.display = 'none';
-        document.body.appendChild(iframe);
-        setTimeout(() => iframe.remove(), 1500);
-    }, 250);
+    window.location.href = `mailto:${emailAddress}?subject=${subject}&body=${body}`;
 
     if (modal) modal.classList.remove('active');
     if (typeof Toast !== 'undefined' && Toast.show) {
